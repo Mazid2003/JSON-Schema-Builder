@@ -1,69 +1,94 @@
-# React + TypeScript + Vite
+# 🧩 JSON Schema Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight and modern **JSON Schema Builder** built using **React**, **TypeScript**, and **Vite**. This project demonstrates how to create dynamic forms and JSON schema generation with clean UI and type safety.
 
-Currently, two official plugins are available:
+🔗 **Live Preview**: [https://json-schema-builder-gamma.vercel.app](https://json-schema-builder-gamma.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚛️ React (with Hooks)
+- ⚡ Vite
+- 🧠 TypeScript
+- 🎨 CSS (custom styling)
+- 🔍 ESLint (recommended + strict + stylistic rules)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clone the repo
+
 ```
+git clone https://github.com/Mazid2003/JSON-Schema-Builder.git
+cd json-schema-builder
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm install
+# or
+yarn install
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3. Run the dev server
+
+npm run dev
+# or
+yarn dev
+App will be live at: http://localhost:5173
+
+📦 Build for Production
+
+npm run build
+To preview the production build locally:
+
+npm run preview
 ```
+```
+🧪 Folder Structure
+
+json-schema-builder/
+├── public/
+├── src/
+│   ├── components/        # Reusable UI components
+            ├──JSONSchemaBuilder.css
+            ├──JSONSchemaBuilder.tsx
+│   ├── utils/             # Helper functions
+│   ├── App.tsx            # Root component
+│   ├── main.tsx           # Entry point
+│   └── index.css          # Global styles
+├── tsconfig.json
+├── vite.config.ts
+├── index.html
+└── README.md
+
+```
+**📤 Deployment**
+
+This project is deployed on Vercel. To deploy your own:
+
+Push to GitHub
+
+Connect GitHub repo to Vercel
+
+Set build command: npm run build
+
+Output directory: dist
+
+Click "Deploy"
+
+**📜 License**
+
+This project is licensed under the MIT License. See LICENSE file for more info.
+
+---
+
+Would you like me to add badges (like Vercel status, license, GitHub stars), or auto-generate this into your repo as a `README.md`?
+
+---
+
+**🧑‍💻 Author**
+
+Mohammad Mazid <br>
+B.Tech AI & Data Science<br>
+
