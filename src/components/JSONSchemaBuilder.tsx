@@ -28,14 +28,16 @@ const getDefaultValue = (type: string) => {
 const buildJson = (fields: FieldType[]) => {
   const result: any = {};
   fields.forEach((field) => {
+    if (!field.key) return; // ✅ Skip fields with empty keys
     if (field.type === "nested" && field.fields) {
-      result[field.key || ""] = buildJson(field.fields);
+      result[field.key] = buildJson(field.fields);
     } else {
-      result[field.key || ""] = getDefaultValue(field.type);
+      result[field.key] = getDefaultValue(field.type);
     }
   });
   return result;
 };
+
 
 const RenderFields = ({ nestIndex, control, register, getValues }: any) => {
   const { fields, append, remove } = useFieldArray({
