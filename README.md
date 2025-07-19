@@ -2,7 +2,7 @@
 
 A lightweight and modern **JSON Schema Builder** built using **React**, **TypeScript**, and **Vite**. This project demonstrates how to create dynamic forms and JSON schema generation with clean UI and type safety.
 
-🔗 **Live Preview**: [https://json-schema-builder-gamma.vercel.app](https://json-schema-builder-gamma.vercel.app)
+🔗 **Live Preview**: (https://json-schema-builder-2q6a.vercel.app/)
 
 ---
 
