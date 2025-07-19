@@ -83,9 +83,7 @@ This project is licensed under the MIT License. See LICENSE file for more info.
 
 ---
 
-Would you like me to add badges (like Vercel status, license, GitHub stars), or auto-generate this into your repo as a `README.md`?
 
----
 
 **🧑‍💻 Author**
 
