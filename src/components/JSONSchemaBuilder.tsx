@@ -38,7 +38,6 @@ const buildJson = (fields: FieldType[]) => {
   return result;
 };
 
-
 const RenderFields = ({ nestIndex, control, register, getValues }: any) => {
   const { fields, append, remove } = useFieldArray({
     control,
@@ -95,6 +94,9 @@ const JSONSchemaBuilder: React.FC = () => {
 
   const [activeTab, setActiveTab] = React.useState("form");
 
+  const jsonOutput = buildJson(formValues.fields);
+  const isEmpty = Object.keys(jsonOutput).length === 0;
+
   return (
     <div className="container">
       <div className="tabs">
@@ -106,7 +108,7 @@ const JSONSchemaBuilder: React.FC = () => {
         <RenderFields control={control} register={register} getValues={getValues} />
       ) : (
         <textarea
-          value={JSON.stringify(buildJson(formValues.fields), null, 2)}
+          value={isEmpty ? "" : JSON.stringify(jsonOutput, null, 2)}
           readOnly
           className="json-output"
         />
