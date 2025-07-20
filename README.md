@@ -37,11 +37,6 @@ npm run dev
 yarn dev
 App will be live at: http://localhost:5173
 
-📦 Build for Production
-
-npm run build
-To preview the production build locally:
-
 npm run preview
 ```
 ```
